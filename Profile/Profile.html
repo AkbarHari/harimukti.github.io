@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="jquery-3.4.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="resource1.css">
+<title>Profile</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div>
+<ul class="navigasi" id="nav">
+	<li><a onclick="openNav()" id="main">Menu</a></li>
+	<li><a href="..\Beranda\beranda.html">Beranda</a></li>
+	<li><a href="..\TentangWeb\about.html">TentangWebsite</a></li>
+	<li><a href="..\Pengaturan\Pengaturan.html">Pengaturan</a></li>
+	<li><a href="..\leaderboard\leaderboard.html">Rangking</a></li>
+	<li style="float:right"><a href="#about">DEV GRAPHIC.</a></li>
+</ul>
+</div>
+
+<div class="topnav">
+  <div class="search-container">
+    <form>
+      <input type="text" placeholder="Search..">
+      <button type="submit">Cari</button>
+    </form>
+  </div>
+</div>
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+  <a href="..\kategori\kategori.html">Kategori</a>
+  <a href="..\kategori\kategori.html">Logo</a>
+  <a href="..\kategori\kategori.html">Poster</a>
+  <a href="..\kategori\kategori.html">Icon</a>
+  <a href="..\kategori\kategori.html">Banner</a>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "205px";
+  document.getElementById("#main").style.marginLeft = "205px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("#main").style.marginLeft= "0";
+}
+</script>
+
+<div class="wallboard">
+	<img class="profile" src="profil.jpg">
+	<div class="profname">
+		<div class="profname2">
+		<h3 class="fname ffamily">Tech Eye Design</h3>
+		<p class="fnameoptional ffamily">Designer & Animator</p>
+		</div>
+	</div>
+</div>
+
+<div class="profinfo">
+	<grid class="grid-container">
+		<grid class="grid-item-1">
+			<h3 class="fbigtext ffamily">Riwayat Pekerjaan:</h3>
+				<br>
+				<ul class="ftext ffamily">
+					<li>2001 Animator of Terminator Film</li>
+					<li>2007 Concept Design of Plant of Zombie Game</li>
+					<li>2011 Art Design of DOTA 2 Game's Heroes</li>
+					<li>2018 Join Cyberpunk 2077 Project as Art Design</li>
+				</ul>
+		</grid>
+		<grid class="grid-item-dummy"></grid>
+		<grid class="grid-item-2">
+			<table>
+			<tr>
+				<td>
+					<button class="ftext ffamily buttonrequest">Rekrut saya</button>
+				</td>
+
+				<td rowspan="2" style="padding-left: 100px;">
+					<p class="fbigtext ffamily" align="right">Rangking : 912<br><br>Tingkat Kebherhasilan : 97%</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<h3 class="fbigtext ffamily">
+					Job Rating:
+					</h3>
+					<h1 class="twhite">4.2</h1>
+					<div class="bar-rating"></div>
+				</td>
+			</tr>
+		</table>
+		</grid>
+	</grid>
+		<!-- <div class="jobdesc">
+				
+		</div> 
+		<div class="jobdesc2">
+		
+		</div> -->
+</div>
+
+<div class="content">
+
+	<grid class="content-container">
+		<grid class="statistic" id="statistic" style="display: none;">
+	 
+	 	<center>
+		<h4 class="twhite ffamily">Bar Pengalaman :</h4>
+		<div class="bar-rating2 bar-rating2-1"><p class="ftext ffamily">Seni Desain: 90%</p></div>
+		<div class="bar-rating2 bar-rating2-2"><p class="ftext ffamily">Animasi 3D: 87%</p></div>
+			<div class="bar-rating2 bar-rating2-3"><p class="ftext ffamily">Seni Pixel: 79%</p></div>
+		</center>
+
+</grid>
+	<grid class="profabout" id="profabout" style="display: none;">
+		
+		<center>
+		<h4 class="twhite ffamily">Tentang Profil :</h4>
+		</center>
+		<br>
+		<p class="ftext ffamily">Tech Eye Design menyediakan jasa mendesain seperti karakter, pemandangan, logo, dan masih banyak lagi. Tunggu apalagi segera tekan tombol request job atau telepon ke 0812345678910.</p>
+
+</grid>
+	</grid>
+
+	
+	<h1 class="fname ffamily fcontent">Gambar Terpopuler Desainer ini : </h1>
+
+	<div class="thumbnail" id="thumbnail">
+		<span class="tooltip" id="tooltip">Klik Untuk Memperbesar Gambar</span>
+		<div class="img2" id="img2"></div>
+		<div class="img1" id="img1"></div>
+	</div>
+
+	<center><a href="..\Gallery\gallery.html"><button class="ftext ffamily buttongallery">Pergi Gallery</button></center>
+
+	<div class="shadow" id="shadow">
+		<span class="close" id="close"></span>
+		<div class="shadow-content">
+		<div class="prev" id="prev">
+		<i class="arrow" id="prev" aria-hidden="true"></i>
+		</div>
+		<div class="next" id="next">
+		<i class="arrow" id="next" aria-hidden="true"></i>
+		</div>
+		<div class="img2s2" id="pic"> </div>
+	</div>
+	</div>
+
+</div>
+
+<script>
+	var img = {"#img1":"2500", "#img2":"5000"};
+	var statushover = true;
+	var currentimg = 2;
+	var maximg = 2
+	var prevScrollpos = window.pageYOffset;
+	
+	$(document).ready(function(){
+		slideimg();
+
+		window.onscroll = function() {
+		var currentScrollPos = window.pageYOffset;
+ 		 if (currentScrollPos > 100 || currentScrollPos < 300) { 
+  		  $("#statistic").show('slow');
+  		  $("#profabout").show('slow');
+  		}
+ 		 prevScrollpos = currentScrollPos;
+		}
+
+		$("#thumbnail").click(function(){
+			$("#shadow").fadeIn(500);
+		});
+
+		$("#close").click(function(){
+			$("#shadow").fadeOut(500);
+		});
+
+		$("#next").click(function(){
+			if (currentimg == maximg){
+					document.getElementById("pic").className = "img2s1";
+					currentimg = 1;
+			}
+			else {
+				document.getElementById("pic").className = "img2s2";
+				currentimg=2;
+			}
+
+		});
+
+		$("#prev").click(function(){
+			if (currentimg == maximg){
+					document.getElementById("pic").className = "img2s1";
+					currentimg = 1;
+			}
+			else {
+				document.getElementById("pic").className = "img2s2";
+				currentimg=2;
+			}
+
+		});
+		
+	});
+
+
+	function slideimg(){
+		$.each( img, function(i,val){
+			setTimeout(function(){
+			$(i).fadeIn(500);},(Number(val)));
+			setTimeout(function(){
+			$(i).fadeOut(500);},(Number(val)*2));
+			
+		});
+		setTimeout(function(){slideimg();},7500);
+	}
+</script>
+
+<div class="ftr">
+<div class="btnfot"></div>
+<div id="containerfot">
+<div id="contfot">
+<div class="ftr_center">
+<h3>DEV GRAPHIC.</h3>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

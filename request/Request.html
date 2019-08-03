@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<link rel="stylesheet" type="text/css" href="request_css.css"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Request Design</title>
+	<script src="jquery-3.4.1.min.js"></script>
+</head>
+<body>
+  <ul class="navigasi" id="nav">
+	<li><a onclick="openNav()" id="main">Menu</a></li>
+	<li><a href="..\TentangWeb\about.html">TentangWebsite</a></li>
+	<li><a href="..\Beranda\beranda.html">Beranda</a></li>
+	<li><a href="..\Profile\profile.html">Profile</a></li>
+	<li><a href="..\leaderboard\leaderboard.html">Rangking</a></li>
+	<li style="float:right"><a href="#about">DEV GRAPHIC.</a></li>
+</ul>
+</div>
+  
+  <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+      <a href="..\kategori\kategori.html">Kategori</a>
+      <a href="..\kategori\kategori.html">Logo</a>
+      <a href="..\kategori\kategori.html">Poster</a>
+      <a href="..\kategori\kategori.html">Icon</a>
+      <a href="..\kategori\kategori.html">Banner</a>
+  </div>
+  <script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "205px";
+      document.getElementById("#main").style.marginLeft = "205px";
+    }
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("#main").style.marginLeft= "0";
+    }
+  </script>
+  <!-- Form -->
+  <div class="form-color">
+    <div class="separate"></div>
+    <div class="header">
+      <h3>Formulir Pesan</h3>
+    </div>
+   <form name="request">
+			<label for="n_Awal">Nama Awal</label>
+  	  <label for="n_Akhir" id="n_akhir">Nama Akhir</label> <br/>
+  	  <input type="text" name="n_Awal" placeholder="Nama awal anda" form="request" required />
+  	  <input type="text" name="n_Akhir" placeholder="Nama akhir anda" form="request" required /> <br/>
+			<label for="phone">No. Telepon</label> <br/>
+  	  <input type="tel" name="phone" placeholder="isi Nomer Telepon" form="request" required /> <br/>
+			<label for="email">Email</label> <br/>
+  	  <input type="Email" name="email" placeholder="isi Email" form="request" required /> <br/>
+  	  <label for="Tema">Tema Permintaan</label> <br/>
+  	  <select name="tema_p" form="request" required>
+  	   	<option value="-">Pilih Tema</option>
+  	   	<option value="Cover Design">Cover Design</option>
+  	   	<option value="Logo">Logo</option>
+  	  </select> <br/>
+  	  <label for="judul_p">Judul Permintaan</label> <br/>
+  	  <input type="text" name="judul_p" placeholder="Isi Judul Permintaan" form="request" required /> <br/>
+			<label for="desc_p">Deskripsi Permintaan</label> <br/>
+  	  <textarea name="desc_p" placeholder="Isi Deskripsi Permintaan" form="request" required></textarea> <br/>	
+  	  <input type="checkbox" class="agg-terms-inp" name="agg-terms" form="request" required> <br/>
+  	  <label for="agg-terms" class="agg-terms">Setuju dengan <a href="#">Syarat & Ketentuan</a></label> <br/>
+  	  <input type="checkbox" class="agg-subs-inp" name="agg-subs" form="request" required /> <br/>
+  	  <label for="agg-subs" class="agg-subs">Berlangganan Newsletter</label> <br/>
+  	<input id="submit" type="button" name="submit" form="request" value="Lanjut">
+  </form>
+</div>
+  <!-- Form END -->
+  
+  <div class="ftr">
+<div class="btnfot"></div>
+<div id="containerfot">
+<div id="contfot">
+<div class="ftr_center">
+<h3>DEV GRAPHIC.</h3>
+</div>
+</div>
+</div>
+</div>
+  
+</body>
+</html>

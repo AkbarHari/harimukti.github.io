@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Kategori</title>
+	<link rel="stylesheet" type="text/css" href="kategori.css">
+	<link rel="stylesheet" type="text/css" href="popup.css">
+	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+</head>
+<body>
+	<div class="bgimg-1">
+	<div>
+<ul class="navigasi" id="nav">
+	<li><a onclick="openNav()" id="main">Menu</a></li>
+	<li><a href="..\Beranda\beranda.html">Beranda</a></li>
+	<li><a href="..\TentangWeb\about.html">TentangWebsite</a></li>
+	<li><a href="..\Profile\profile.html">Profile</a></li>
+	<li><a href="..\leaderboard\leaderboard.html">Rangking</a></li>
+	<li style="float:right"><a href="#about">DEV GRAPHIC.</a></li>
+</ul>
+</div>
+
+<div class="topnav">
+  <div class="search-container">
+    <form>
+      <input type="text" placeholder="Search..">
+      <button type="submit">Cari</button>
+    </form>
+  </div>
+</div>
+	
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+  <a href="..\kategori\kategori.html">Kategori</a>
+  <a href="..\kategori\kategori.html">Logo</a>
+  <a href="..\kategori\kategori.html">Poster</a>
+  <a href="..\kategori\kategori.html">Icon</a>
+  <a href="..\kategori\kategori.html">Banner</a>
+</div>
+	
+  	<div class="caption">
+		<h1>Temukan Desainer & Kreatif Terbaik Dunia</h1>
+		<p>Dev Graphic. memiliki tujuan utama untuk menemukan & menampilkan<br>
+		karya kreatif bagi profesional desain terbaik dunia</p>
+  	</div>
+  	<div class="btn">
+  		<center><a href="popular" class="button">Popular</a></center>
+  	</div>
+  	</div>
+	
+	<!-- Three columns -->
+	<div class="row">
+  		<div class="column1 column" onclick="openTab('b1');">
+    		All
+  		</div>
+  		<div class="column2 column" onclick="openTab('b2');">
+    		Logo
+  		</div>
+  		<div class="column3 column" onclick="openTab('b3');">
+    		Poster
+  		</div>
+  		<div class="column4 column" onclick="openTab('b4');">
+    		Banner
+  		</div>
+  		<div class="column5 column" onclick="openTab('b5');">
+    		Icon
+  		</div>
+	</div>
+
+	<!-- Full-width columns: (hidden by default) -->
+	<div id="b1" class="containerTab1 containerTab">
+	
+  		<button class="image">	
+		<img id="myImg" class="myImg" src="logo4.png">
+		<!-- Pop Up -->
+		<div id="myModal1" class="modal">
+		<span class="close">&times;</span>
+		<div class="grid-container">
+		<div class="item1"> <img class="modal-content" id="img01"> </div>
+		<div class="item2"> <a href="..\request\request.html"><div class="but" style="vertical-align:middle"> <span>Pesan</span></div></a>
+							 <a href="..\Gallery\gallery.html"><div class="but" style="vertical-align:middle"> <span>Gallery</span></div></a>
+		</div>
+		</div>
+		</div>
+		</button>
+		
+  		<button class="image">
+  		<img id="myImg" class="myImg" src="logo2.jpg">
+		<!-- Pop Up -->
+		<div id="myModal2" class="modal">
+		<span class="close">&times;</span>
+		<div class="grid-container">
+		<div class="item1"> <img class="modal-content" id="img01"> </div>
+		<div class="item2"> <a href="..\request\request.html"><div class="but" style="vertical-align:middle"> <span>Pesan</span></div></a>
+						<div class="but" style="vertical-align:middle"> <span>Gallery</span></div>
+		</div>
+		</div>
+		</div>
+  		</button>
+		
+  		<button class="image">
+			<img id="myImg" class="myImg" src="logo3.jpg">
+		<!-- Pop Up -->
+		<div id="myModal3" class="modal">
+		<span class="close">&times;</span>
+		<div class="grid-container">
+		<div class="item1"> <img class="modal-content" id="img01"> </div>
+		<div class="item2"> <a href="..\request\request.html"><div class="but" style="vertical-align:middle"> <span>Pesan</span></div></a>
+							<div class="but" style="vertical-align:middle"> <span>Gallery</span></div>
+		</div>
+		</div>
+		</div>
+  		</button>
+		
+  		<button class="image">
+			<img id="myImg" class="myImg" src="banner1.jpg">
+		<!-- Pop Up -->
+		<div id="myModal4" class="modal">
+		<span class="close">&times;</span>
+		<div class="grid-container">
+		<div class="item1"> <img class="modal-content" id="img01"> </div>
+		<div class="item2"> <a href="..\request\request.html"><div class="but" style="vertical-align:middle"> <span>Pesan</span></div></a>
+							<div class="but" style="vertical-align:middle"> <span>Gallery</span></div>
+		</div>
+		</div>
+		</div>
+  		</button>
+		
+  		<button class="image">
+			<img id="myImg" class="myImg" src="banner2.jpg">
+		<!-- Pop Up -->
+		<div id="myModal5" class="modal">
+		<span class="close">&times;</span>
+		<div class="grid-container">
+		<div class="item1"> <img class="modal-content" id="img01"> </div>
+		<div class="item2"> <a href="..\request\request.html"><div class="but" style="vertical-align:middle"> <span>Pesan</span></div></a> 
+							<div class="but" style="vertical-align:middle"> <span>Gallery</span></div>
+		</div>
+		</div>
+		</div>
+  		</button>
+		
+  		<button class="image">
+			<img id="myImg" class="myImg" src="poster1.jpg">
+		<!-- Pop Up -->
+		<div id="myModal6" class="modal">
+		<span class="close">&times;</span>
+		<div class="grid-container">
+		<div class="item1"> <img class="modal-content" id="img01"> </div>
+		<div class="item2"> <a href="..\request\request.html"><div class="but" style="vertical-align:middle"> <span>Pesan</span></div></a>
+							<div class="but" style="vertical-align:middle"> <span>Gallery</span></div>
+		</div>
+		</div>
+		</div>
+  		</button>
+		
+  		<button class="image">
+			<img id="myImg" class="myImg" src="poster3.jpg">
+		<!-- Pop Up -->
+		<div id="myModal7" class="modal">
+		<span class="close">&times;</span>
+		<div class="grid-container">
+		<div class="item1"> <img class="modal-content" id="img01"> </div>
+		<div class="item2"> <a href="..\request\request.html"><div class="but" style="vertical-align:middle"> <span>Pesan</span></div></a>
+							<div class="but" style="vertical-align:middle"> <span>Gallery</span></div>
+		</div>
+		</div>
+		</div>
+  		</button>
+		
+  		<button class="image">
+		<img id="myImg" class="myImg" src="icon1.png">
+		<!-- Pop Up -->
+		<div id="myModal8" class="modal">
+		<span class="close">&times;</span>
+		<div class="grid-container">
+		<div class="item1"> <img class="modal-content" id="img01"> </div>
+		<div class="item2"> <a href="..\request\request.html"><div class="but" style="vertical-align:middle"> <span>Pesan</span></div></a>
+							<div class="but" style="vertical-align:middle"> <span>Gallery</span></div>
+		</div>
+		</div>
+		</div>
+  		</button>
+		
+  		<button class="image">
+			<img id="myImg" class="myImg" src="icon2.png">
+		<!-- Pop Up -->
+		<div id="myModal9" class="modal">
+		<span class="close">&times;</span>
+		<div class="grid-container">
+		<div class="item1"> <img class="modal-content" id="img01"> </div>
+		<div class="item2"> <a href="..\request\request.html"><div class="but" style="vertical-align:middle"> <span>Pesan</span></div></a>
+							<div class="but" style="vertical-align:middle"> <span>Gallery</span></div>
+		</div>
+		</div>
+		</div>
+  		</button>
+	</div>
+
+	<div id="b2" class="containerTab2 containerTab">
+	
+  		<button class="image">
+  		<img src="logo1.jpg">
+  		</button>
+		
+  		<button class="image">
+		<img src="logo2.jpg">
+  		</button>
+		
+  		<button class="image">
+  			<img src="logo3.jpg">
+  		</button>
+		
+  		<button class="image">
+  			<img src="logo4.png">
+  		</button>
+		
+  		<button class="image">
+  			<img src="logo5.png">
+  		</button>
+		
+  		<button class="image">
+  			<img src="logo6.jpg">
+  		</button>
+		
+  		<button class="image">
+  			<img src="logo7.jpg">
+  		</button>
+		
+  		<button class="image">
+  			<img src="logo8.jpg">
+  		</button>
+		
+  		<button class="image">
+  			<img src="logo9.jpg">
+  		</button>
+		
+		
+		<script>
+	// Get the modal
+	var modal = $(".modal");
+
+	// Get the image and insert it inside the modal - use its "alt" text as a caption
+	var modalImg = $(".modal-content");
+	var captionText = document.getElementById("caption");
+	var clickindex = 0;
+	var span = 0;
+	
+	/*img.onclick = function(){
+	}*/
+	
+	$(".myImg").click(function(){
+		clickindex = $('.myImg').index(this);
+		modal[clickindex].style.display = "block";
+		modalImg[clickindex].src = this.src;
+		span = document.getElementsByClassName("close");
+	});
+
+	// Get the <span> element that closes the modal
+
+	// When the user clicks on <span> (x), close the modal
+	$(".close").click(function(){
+	modal[clickindex].style.display = "none";
+});
+</script>
+		
+	</div>
+
+	<div id="b3" class="containerTab3 containerTab">
+  		<button class="image">
+  			<img src="poster1.jpg">
+  		</button>
+  		<button class="image">
+  			<img src="poster2.png">
+  		</button>
+  		<button class="image">
+  			<img src="poster3.jpg">
+  		</button>
+  		<button class="image">
+  			<img src="poster4.jpg">
+  		</button>
+  		<button class="image">
+  			<img src="poster5.jpg">
+  		</button>
+  		<button class="image">
+  			<img src="poster6.jpg">
+  		</button>
+  		<button class="image">
+  			<img src="poster7.jpg">
+  		</button>
+  		<button class="image">
+  			<img src="poster8.png">
+  		</button>
+  		<button class="image">
+  			<img src="poster9.jpg">
+  		</button>
+	</div>
+
+	<div id="b4" class="containerTab4 containerTab">
+  		<button class="image">
+  			<img src="banner1.jpg">
+  		</button>
+  		<button class="image">
+  			<img src="banner2.jpg">
+  		</button>
+  		<button class="image">
+  			<img src="banner3.jpg">
+  		</button>
+  		<button class="image">
+  			<img src="banner4.jpg">
+  		</button>
+  		<button class="image">
+  			<img src="banner5.jpg">
+  		</button>
+  		<button class="image">
+  			<img src="banner6.jpg">
+  		</button>
+  		<button class="image">
+  			<img src="banner7.jpg">
+  		</button>
+  		<button class="image">
+  			<img src="banner8.jpg">
+  		</button>
+  		<button class="image">
+  			<img src="banner9.jpg">
+  		</button>
+	</div>
+
+	<div id="b5" class="containerTab5 containerTab">
+  		<button class="image">
+  			<img src="icon1.png">
+  		</button>
+  		<button class="image">
+  			<img src="icon2.png">
+  		</button>
+  		<button class="image">
+  			<img src="icon3.png">
+  		</button>
+  		<button class="image">
+  			<img src="icon4.png">
+  		</button>
+  		<button class="image">
+  			<img src="icon5.png">
+  		</button>
+  		<button class="image">
+  			<img src="icon6.png">
+  		</button>
+  		<button class="image">
+  			<img src="icon7.png">
+  		</button>
+  		<button class="image">
+  			<img src="icon8.png">
+  		</button>
+  		<button class="image">
+  			<img src="icon9.png">
+  		</button>
+	</div>
+  
+	
+
+
+	<script>
+		function openNav() {
+  		document.getElementById("mySidebar").style.width = "205px";
+  		document.getElementById("#main").style.marginLeft = "205px";
+		}
+		function closeNav() {
+  		document.getElementById("mySidebar").style.width = "0";
+  		document.getElementById("#main").style.marginLeft= "0";
+		}
+	</script>
+	<script>
+		$(document).ready(function(){	
+  			$(".containerTab1").toggle();{
+  				$(".column1").click(function(){
+  					$(".containerTab2").hide();
+  					$(".containerTab3").hide();
+  					$(".containerTab4").hide();
+  					$(".containerTab5").hide();
+  					$(".containerTab1").show();
+  				});
+  				$(".column2").click(function(){
+  					$(".containerTab1").hide();
+  					$(".containerTab3").hide();
+  					$(".containerTab4").hide();
+  					$(".containerTab5").hide();
+    				$(".containerTab2").show();
+  				});
+  				$(".column3").click(function(){
+  					$(".containerTab1").hide();
+  					$(".containerTab2").hide();
+  					$(".containerTab4").hide();
+  					$(".containerTab5").hide();
+    				$(".containerTab3").show();
+  				});
+  				$(".column4").click(function(){
+  					$(".containerTab1").hide();
+  					$(".containerTab2").hide();
+  					$(".containerTab3").hide();
+  					$(".containerTab5").hide();
+    				$(".containerTab4").show();
+  				});
+  				$(".column5").click(function(){
+  					$(".containerTab1").hide();
+  					$(".containerTab2").hide();
+  					$(".containerTab3").hide();
+  					$(".containerTab4").hide();
+    				$(".containerTab5").show();
+  				});
+  			}
+		});
+	</script>
+	
+<div class="ftr">
+<div class="btnfot"></div>
+<div id="containerfot">
+<div id="contfot">
+<div class="ftr_center">
+<h3>DEV GRAPHIC.</h3>
+</div>
+</div>
+</div>
+</div>
+
+	
+</body>
+</html>

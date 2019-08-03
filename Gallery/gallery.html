@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="gallery.css">
+	<link rel="stylesheet" type="text/css" href="profileGal.css">
+	<script type="text/javascript" src="jquery-3.4.1.min.js">
+	</script>
+<title>Gallery</title>
+</head>
+<body>
+<!-- -->
+<div>
+<ul class="navigasi" id="nav">
+	<li><a onclick="openNav()" id="main">Menu</a></li>
+	<li><a href="..\Beranda\beranda.html">Beranda</a></li>
+	<li><a href="..\TentangWeb\about.html">TentangWebsite</a></li>
+	<li><a href="..\Profile\profile.html">Profile</a></li>
+	<li><a href="..\leaderboard\leaderboard.html">Rangking</a></li>
+	<li style="float:right"><a href="#about">DEV GRAPHIC.</a></li>
+</ul>
+</div>
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+  <a href="..\kategori\kategori.html">Kategori</a>
+  <a href="..\kategori\kategori.html">Logo</a>
+  <a href="..\kategori\kategori.html">Poster</a>
+  <a href="..\kategori\kategori.html">Icon</a>
+  <a href="..\kategori\kategori.html">Banner</a>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "205px";
+  document.getElementById("#main").style.marginLeft = "205px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("#main").style.marginLeft= "0";
+}
+</script>
+
+<div class="topnavS">
+  <div class="search-container">
+    <form>
+      <input type="text" placeholder="Search..">
+      <button type="submit">Cari</button>
+    </form>
+  </div>
+</div>
+
+<div class="grid-container">
+
+	<div class="item1">
+
+<div id="navbar">
+  <a><img src="..\Gambar\fprofil1.jpg" class="avatar"></a>
+  <h2 class="nama">Rhaka Novyansyah D</h2>
+  <h2 class="nama">Designer</h2>
+</div>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+	
+	</div>
+	
+	<div class="item2">
+	<div class="sidenavLeft">
+  <a href="#about">Tentang Saya</a>
+  <a href="#services">Kontak</a>
+</div>
+
+	</div>
+
+<div class="item3">
+	
+<center>		
+<table class="tableGalery"><!-- tabel dalam -->
+	<tr>
+	
+		<td class="tdTombol"><!-- td tombol -->
+			<div class="prev" onclick="plusSlides(-1)"> Sebelumnya </div>
+		</td>
+		
+	<td><!-- td spin -->
+		<div> 
+			<div class="mySlides spin_one">
+				<img src="..\Gambar\a.jpg" style="width:100%">
+			</div>
+			
+<div class="Gright">
+
+	<div class="mySlides spin_one" id="main">
+		<img src="..\Gambar\b.jpg" style="width:100%">
+	</div>
+
+	<div class="mySlides spin_one" id="main">
+		<img src="..\Gambar\c.jpg" style="width:100%">
+	</div>
+    
+	<div class="mySlides spin_one" id="main">
+		<img src="..\Gambar\d.jpg" style="width:100%">
+	</div>
+
+	<div class="mySlides spin_one" id="main">
+		<img src="..\Gambar\e.jpg" style="width:100%">
+	</div>
+    
+	<div class="mySlides spin_one" id="main">
+		<img src="..\Gambar\f.jpg" style="width:100%">
+	</div>
+  
+</div>
+  </td>
+  <td>
+	<div class="Gleft">
+		<div class="spin_two">
+			<img class="demo" src="..\Gambar\f.jpg" style="width:100%" onclick="currentSlide(1)">
+	</div>
+	
+	<div class="spin_two">
+		<img class="demo" src="..\Gambar\e.jpg" style="width:100%" onclick="currentSlide(2)">
+    </div>
+    
+	<div class="spin_two">
+      <img class="demo" src="..\Gambar\d.jpg" style="width:100%" onclick="currentSlide(3)">
+    </div>
+    
+	<div class="spin_two">
+      <img class="demo" src="..\Gambar\c.jpg" style="width:100%" onclick="currentSlide(4)">
+    </div>
+    
+	<div class="spin_two">
+      <img class="demo" src="..\Gambar\b.jpg" style="width:100%" onclick="currentSlide(5)">
+    </div>    
+    
+	<div class="spin_two">
+      <img class="demo" src="..\Gambar\a.jpg" style="width:100%" onclick="currentSlide(6)">
+    </div>
+		
+		</div>
+	</div>
+</td>
+	
+		<td>
+			<div class="next" onclick="plusSlides(1)"> Selanjutnya </div>
+		</td>
+		
+	</tr>
+</table>
+</center>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+ 
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].style.display = "block";
+}
+</script>
+
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <img class="zoom" src="..\Gambar\a.jpg" style="width:100%">
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img class="zoom" src="..\Gambar\b.jpg" style="width:100%">
+      </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img class="zoom" src="..\Gambar\c.jpg" style="width:100%">
+      </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img class="zoom" src="..\Gambar\d.jpg" style="width:100%">
+      </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img class="zoom" src="..\Gambar\a.jpg" style="width:100%">
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img class="zoom" src="..\Gambar\b.jpg" style="width:100%">
+      </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img class="zoom" src="..\Gambar\c.jpg" style="width:100%">
+      </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img class="zoom" src="..\Gambar\d.jpg" style="width:100%">
+      </div>
+  </div>
+  
+</div>
+</div>
+
+<div class="ftr">
+<div class="btnfot"></div>
+<div id="containerfot">
+<div id="contfot">
+<div class="ftr_center">
+<h3>DEV GRAPHIC.</h3>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

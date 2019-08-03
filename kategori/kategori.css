@@ -1,0 +1,300 @@
+*{
+      box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 85%;
+}
+.navigasi {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  background-color: #111;
+  width: 100%;
+  font-size: 17px;
+  -webkit-transition: height 0.4s ease-in-out;
+  transition: height 0.4s ease-in-out;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: bold;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: orange;
+}
+
+@media screen and (max-width: 900px) {
+  .navigasi #nav {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  
+.navigasi #nav li a {
+    float: left;
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .navigasi #nav li a {
+    text-align: center;
+    float: none;
+  }
+}
+.sidebar
+{
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  opacity: 0.65;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a
+{
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  font-family: rifqan;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover
+{
+  color: orange;
+}
+
+.sidebar .closebtn
+{
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn
+{
+  width: 40px;
+  padding-left: 10px;
+  font-size: 30px;
+  font-family: Rifqan;
+  color: orange;
+}
+
+#main
+{
+  transition: margin-left .5s;
+}
+
+@media screen and (max-height: 450px)
+{
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+.bgimg-1{
+   background-image: url("cover2.png");
+    min-height: 100%;
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	width: 100%;
+}
+.caption {
+    font-family: sans-serif;
+    padding: 62px;
+    margin: 0px;
+}
+.caption h1 {
+    font-weight: bold;
+    margin-top: -23px;
+    text-align: center;
+    padding: 26px;
+    font-size: 40px;
+    color: white;
+}
+.caption p{
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 25px;
+    margin-top: -80px;
+    padding: 49px;
+    text-align: center;
+    color: white;
+}
+.btn{
+  padding: 12px;
+  margin: -73px;
+}
+.button {
+    border-radius: 20px;
+    border: none;
+    background-color: #FF9800;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+.button:hover{
+  opacity: 0.8;
+}
+
+.row{
+  padding: 50px 100px;
+  margin: 30px 0px;
+  padding-top: 40px;
+  height: 50px;
+  align-items: center;
+  width: 100%;
+  background: mediumseagreen;
+}
+
+.column {
+  float: left;
+  width: 18%;
+  padding: 14px;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+}
+.column:hover{
+  background-color: orange;
+}
+
+.containerTab {
+  align-items: center;
+  padding: 20px;
+ 
+  margin-left: 100px;
+  color: black;
+  display: none;
+}
+
+img{
+  display: inline-block;
+  position: relative;
+  max-width: 450px;
+  max-height: 250px;
+}
+
+.image {
+  box-sizing: border-box;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  width: 300px;
+  padding: 10px;
+  margin: 15px;
+  background-color: orange;
+}
+
+/* Closable button inside the container tab */
+.closebtn {
+  float: right;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+
+.topnav
+{
+  overflow: hidden;
+  background-color: orange;
+  height: 50px;
+}
+
+.topnav a
+{
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav .search-container
+{
+  float: right;
+}
+
+.topnav input[type=text]
+{
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button
+{
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover
+{
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px)
+{
+  .topnav .search-container
+  {
+    float: none;
+  }
+  .topnav input[type=text], .topnav .search-container button
+  {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text]
+  {
+    border: 1px solid #ccc;  
+  }
+}
+

@@ -1,0 +1,468 @@
+*
+{
+	box-sizing: border-box;
+	padding: 0px;
+	margin: 0px;
+} 
+
+/*navbar*/
+
+.navigasi
+{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  background-color: #111;
+  width: 100%;
+  font-size: 17px;
+  -webkit-transition: height 0.4s ease-in-out;
+  transition: height 0.4s ease-in-out;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: bold;
+}
+
+li
+{
+  float: left;
+}
+
+li a
+{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active)
+{
+  background-color: orange;
+}
+
+@media screen and (max-width: 900px)
+{
+  .navigasi #nav
+  {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  
+  .navigasi #nav li a
+  {
+    float: left;
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 400px)
+{
+  .navigasi #nav li a
+  {
+    text-align: center;
+    float: none;
+  }
+}
+
+/*body*/
+
+.background
+{
+	background-color: MediumSeaGreen;
+	width: 100%;
+	height: 100%;
+	background-size: 100%;
+ }
+
+/*button request*/
+
+.request
+{
+	background-color: orange;
+	border: none;
+	color: white;
+	padding: 16px 32px;
+	text-align: center;
+	font-size: 20px;
+	margin: 4px 2px;
+	opacity: 0.6;
+	transition: 0.3s;
+	display: inline-block;
+	text-decoration: none;
+	cursor: pointer;
+	height: 56px;
+	font-family: rifqan;
+}
+
+.request:hover
+{
+	opacity: 1
+}
+
+/*slide show*/
+
+body
+{
+	font-family: rifqan;
+}
+
+.mySlides
+{
+	display: none;
+}
+
+img
+{
+	vertical-align: middle;
+}
+
+.slideshow-container
+{
+	min-width: 100px;
+	width: 100%;
+	height: 525px;
+	overflow: hidden;
+	position: relative;
+}
+
+.fade img
+{
+    animation-name: fade;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+}
+
+@-webkit-keyframes fade
+		{
+            from
+			{
+                margin-left: -50%;
+                width: 100%;
+            }
+
+            to
+			{
+                margin-left: 0%;
+                width: 100%;
+            }
+        }
+
+@media only screen and (max-width: 300px)
+{
+  .text 
+	{
+	  font-size: 11px
+	}
+}
+
+/*side navbar*/
+
+.sidebar
+{
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0,0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a
+{
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  font-family: rifqan;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover
+{
+  color: orange;
+}
+
+.sidebar .closebtn
+{
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn
+{
+	width: 40px;
+	padding-left: 10px;
+	font-size: 30px;
+	font-family: Rifqan;
+	color: orange;
+}
+
+#main
+{
+  transition: margin-left .5s;
+}
+
+@media screen and (max-height: 450px)
+{
+  .sidebar 
+	{
+	  padding-top: 15px;
+	}
+  .sidebar a 
+	{
+	  font-size: 18px;
+	}
+}
+
+/*gallery*/
+
+*
+{
+  box-sizing: border-box;
+}
+
+.main
+{
+  max-width: 1000px;
+  min-width: 100px;
+  margin: auto;
+}
+
+.row
+{
+  margin: 8px -16px;
+}
+
+.row,
+.row > .column
+{
+  padding: 8px;
+}
+
+.column
+{
+  float: left;
+  width: 25%;
+}
+ 
+.row:after
+{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.content
+{
+  background-color: orange;
+  padding: 10px;
+}
+
+@media screen and (max-width: 900px)
+{
+  .column
+  {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px)
+{
+  .column
+  {
+    width: 100%;
+  }
+}
+
+/*zoom image*/
+
+.zoom
+{
+  transition: transform .1s;
+  margin: 0 auto;
+}
+
+.zoom:hover
+{
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2); 
+}
+
+.fott
+{
+	width: 100%;
+	height: 64px;
+	top: 0;
+	background-color: rgba(0,0,0,0.7);
+}
+
+
+.topnav
+{
+  overflow: hidden;
+  background-color: orange;
+  height: 50px;
+}
+
+.topnav a
+{
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav .search-container
+{
+  float: right;
+}
+
+.topnav input[type=text]
+{
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button
+{
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover
+{
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px)
+{
+  .topnav .search-container
+  {
+    float: none;
+  }
+  .topnav input[type=text], .topnav .search-container button
+  {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text]
+  {
+    border: 1px solid #ccc;  
+  }
+}
+
+.ftr .btnfot
+{
+	width: 2em;
+	height: 2em;
+	background-color: orange;
+	border-radius:35px;
+	margin:0 auto;
+	position:relative;
+	-webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.ftr .btnfot:hover
+{
+	width: 2em;
+	height: 2em;
+	background-color: #111;
+	-webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+	position:relative;
+}
+
+.ftr
+{
+	bottom:0;
+	left:0;
+	position:fixed;
+    width: 100%;
+    height: 2em;
+    overflow:hidden;
+    margin:0 auto;
+	-webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+	z-index:999;
+}
+
+.ftr:hover
+{
+	-webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+	height: 10em;
+}
+
+.ftr #containerfot
+{
+	margin-top:5px;
+	width:100%;
+	height:100%;
+	position:relative;
+	top:0;
+	left:0;
+	background: #111;
+}
+
+.ftr #contfot
+{
+	position:relative;
+	top:-45px;
+	right:190px;
+	width:150px;
+	height:auto;
+	margin:0 auto;
+}
+
+.ftr_center
+{
+	width:500px;
+	float:left;
+	text-align:center;
+}
+
+.ftr h3
+{
+	font-size: 30px;
+	margin-top:70px;
+	color: white;
+}

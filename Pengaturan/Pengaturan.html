@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Pengaturan</title>
+	<link rel="stylesheet" type="text/css" href="resource2.css">
+	<script src="jquery-3.4.1.min.js"></script>
+	
+</head>
+
+<body>
+<div>
+<ul class="navigasi" id="nav">
+	<li><a onclick="openNav()" id="main">Menu</a></li>
+	<li><a href="..\Beranda\beranda.html">Beranda</a></li>
+	<li><a href="..\TentangWeb\about.html">TentangWebsite</a></li>
+	<li><a href="..\Profile\profile.html">Profile</a></li>
+	<li><a href="..\leaderboard\leaderboard.html">Rangking</a></li>
+	<li style="float:right"><a href="#about">DEV GRAPHIC.</a></li>
+</ul>
+</div>
+
+
+<div class="topnav">
+  <div class="search-container">
+    <form>
+      <input type="text" placeholder="Search..">
+      <button type="submit">Cari</button>
+    </form>
+  </div>
+</div>
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+  <a href="..\kategori\kategori.html">Kategori</a>
+  <a href="..\kategori\kategori.html">Logo</a>
+  <a href="..\kategori\kategori.html">Poster</a>
+  <a href="..\kategori\kategori.html">Icon</a>
+  <a href="..\kategori\kategori.html">Banner</a>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "205px";
+  document.getElementById("#main").style.marginLeft = "205px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("#main").style.marginLeft= "0";
+}
+</script>
+
+<div class="grid-container">
+	<div class="item1">
+		<div class="container-listtab">
+			<div class="sharp" id="sharp1"></div>
+			<div class="content-listtab">
+				<div class="listumum openlist" id="listumum">
+					<div class="list-container" id="list-container1">
+					<h3 class="fbigtext ffamily">Cepat Memproses Web :</h3>
+					<div class="box-check" id="fastload" onclick="ffastload()">
+						<div class="box-checkbox" id="boxfastload">
+							<h3 class="fnameoptional ffamily" id="fastload-onoff">OFF</h3>
+						</div>
+					</div>
+					</div>
+				</div>
+				<div class="listtampilan" id="listtampilan" style="display:none;">
+					<div class="list-container" id="list-container2">
+					<h3 class="fbigtext ffamily">Mode Buta Warna :</h3>
+					<div class="box-check" id="blind" onclick="fblind()">
+						<div class="box-checkbox" id="boxblind">
+							<h3 class="fnameoptional ffamily" id="blind-onoff">OFF</h3>
+						</div>
+					</div>
+					<h3 class="fbigtext ffamily">Tema yang di Pilih :</h3>
+					<div class="box-combo">
+  						<button class="combo-content ffamily" id="buttontema"><span id="temacontent">Tema Laut Hijau</span></button>
+  						<div class="tema-content-box fnameoptional ffamily" id="tema-content-box">
+ 						 <span>Tema Kristal Indigo</span>
+ 						 <span>Tema Laut Hijau</span>
+ 						 <span>Tema Langit Mars</span>
+  						</div>
+  						<h3 class="ffamily ftext"><br>Catatan:</h3>
+  						<p class="ffamily ftext">Tema tidak bisa di aktifkan ketika mode buta warna aktif.</p>
+					</div>
+					</div>
+				</div>
+				<div class="listprivasi" id="listprivasi" style="display:none;">
+					<div class="list-container" id="list-container3">
+					<h3 class="fbigtext ffamily">Menyembunyikan Peringkat pada Profil :</h3>
+					<div class="box-combo">
+  						<button class="combo-content ffamily" id="buttoncombo" style="background-image: none; background-color: lightseagreen"><span id="privasi1">Tidak Setuju</span></button>
+  						<div class="checkcombo-content-box fnameoptional ffamily" id="privasi1-box">
+ 						 <span>Setuju</span>
+ 						 <span>Tidak Setuju</span>
+  						</div>
+					</div>
+					</div>
+				</div>
+				<div class="listadvance" id="listadvance" style="display:none;">
+					<div class="list-container" id="list-container4">
+					<h3 class="fbigtext ffamily">Z3 Script :</h3>
+					<div class="box-check" id="z3" onclick="fz3()">
+						<div class="box-checkbox" id="boxz3">
+							<h3 class="fnameoptional ffamily" id="z3-onoff">OFF</h3>
+						</div>	
+					</div>
+					<h3 class="ffamily ftext" style="margin-left: 10px"><br>Catatan:</h3>
+					<p class="ffamily ftext" style="margin-left: 10px">Script ini sangat berguna jika diaktifkan untuk membuat <br>presentasi desainmu kualitasnya lebih baik <br>namun memerlukan perfomance yang tinggi.</p>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+  	<div class="item2">
+  		<div class="actived" id="tabumum" onclick="tab1()" style="background-color: green;"><h3 class="ffamily">Umum</h3></div>
+  		<div class="tab-tampilan" id="tabtampilan" onclick="tab2()" ><h3 class="ffamily">Tampilan</h3></div>
+  		<div class="tab-privasi" id="tabprivasi" onclick="tab3()"><h3 class="ffamily">Privasi</h3></div>
+  		<div class="tab-advance" id="tabadvance" onclick="tab4()"><h3 class="ffamily">Setelan Lanjutan</h3></div>
+  	</div>
+</div>
+
+<script type="text/javascript">
+	    var temptab = 1;
+	    var fastload = 0;
+	    var blind = 0;
+	    var z3 = 0;
+	    var coloractive = "green";
+	    var colordeactive = "linear-gradient(to right, lightseagreen , seagreen)";
+	    var imgback = "url(content.png)"
+
+		function tab1(){
+		if (temptab == 1){
+
+		}
+		else{
+			$("#list-container"+temptab).fadeOut(300);
+		$('#listtampilan , #listprivasi , #listadvance').removeClass('openlist');
+		checkactivated();
+		$(".item2 div:not(.actived)").css({
+				"background-image": colordeactive
+			});
+		temptab = 1;
+		document.getElementById("tabumum").className="actived";
+		$(".actived").css({
+			 	"background-color" : coloractive,
+			 	"background-image" : "none"
+			 });
+		setTimeout(function(){
+			$("#list-container"+temptab).fadeIn(300);
+			$('#listumum').show();
+			document.getElementById('listumum').classList.add('openlist');
+			$('#listtampilan , #listprivasi , #listadvance').removeClass('openlist');
+			//document.getElementById('listtampilan','listprivasi','listadvance').classList.remove('openlist');
+		},500);	
+		}
+		
+		}
+
+		function tab2(){
+		if (temptab == 2){
+			
+		}
+		else{
+			$("#list-container"+temptab).fadeOut(300);
+		$('#listumum , #listprivasi , #listadvance').removeClass('openlist');
+		checkactivated();
+		$(".item2 div:not(.actived)").css({
+				"background-image": colordeactive
+			});
+		temptab = 2;
+		document.getElementById("tabtampilan").className="actived";
+		$(".actived").css({
+			 	"background-color" : coloractive,
+			 	"background-image" : "none"
+			 });
+		setTimeout(function(){
+		$("#list-container"+temptab).fadeIn(300);
+			$('#listtampilan').show();
+			document.getElementById('listtampilan').classList.add('openlist');
+			$('#listumum , #listprivasi , #listadvance').removeClass('openlist');
+			//document.getElementById('listumum','listprivasi','listadvance').classList.remove('openlist');
+		},500);	}
+
+		}
+
+		function tab3(){
+			if (temptab == 3){
+			
+		}
+		else{
+
+			$("#list-container"+temptab).fadeOut(300);
+		$('#listumum , #listtampilan , #listadvance').removeClass('openlist');
+		checkactivated();
+		$(".item2 div:not(.actived)").css({
+				"background-image": colordeactive
+			});
+		temptab = 3;
+		document.getElementById("tabprivasi").className="actived";
+		$(".actived").css({
+			 	"background-color" : coloractive,
+			 	"background-image" : "none"
+			 });
+		setTimeout(function(){	
+			$("#list-container"+temptab).fadeIn(300);
+			$('#listprivasi').show();
+			document.getElementById('listprivasi').classList.add('openlist');
+			$('#listumum , #listtampilan , #listadvance').removeClass('openlist');
+			//document.getElementById('listumum','listtampilan','listadvance').classList.remove('openlist');
+		},500);	}
+		}
+
+		function tab4(){
+			if (temptab == 4){
+			
+		}
+		else{
+			$("#list-container"+temptab).fadeOut(300);
+		$('#listumum , #listtampilan , #listprivasi').removeClass('openlist');
+		checkactivated();
+		$(".item2 div:not(.actived)").css({
+				"background-image": colordeactive
+
+			});
+		temptab = 4;
+		document.getElementById("tabadvance").className="actived";
+		$(".actived").css({
+			 	"background-color" : coloractive,
+			 	"background-image" : "none"
+			 });
+		setTimeout(function(){
+			$("#list-container"+temptab).fadeIn(300);
+			$('#listadvance').show();
+			document.getElementById('listadvance').classList.add('openlist');
+			$('#listumum , #listtampilan , #listprivasi').removeClass('openlist');
+			//document.getElementById('listumum','listtampilan','listprivasi').classList.remove('openlist');
+			
+		},500);	}
+		}
+
+		function checkactivated(){
+
+		if(temptab==1){
+			document.getElementById("tabumum").className="tab-umum";
+			setTimeout(function(){	
+				$('#listumum').hide();
+			},500);
+		}
+		else if(temptab==2){
+			document.getElementById("tabtampilan").className="tab-tampilan";
+			//document.getElementById('listtampilan').classList.remove('openlist');
+			setTimeout(function(){	
+				$('#listtampilan').hide();
+			},500);
+		}
+		else if(temptab==3){
+			document.getElementById("tabprivasi").className="tab-privasi";
+			//document.getElementById('listprivasi').classList.remove('openlist');
+			setTimeout(function(){	
+				$('#listprivasi').hide();
+			},500);
+		}
+		else{
+			document.getElementById("tabadvance").className="tab-advance";
+			//document.getElementById('listadvance').classList.remove('openlist');
+			setTimeout(function(){	
+				$('#listadvance').hide();
+			},500);
+		}
+		}
+
+		function ffastload(){
+			if(fastload==0){
+				$("#boxfastload").animate({
+				marginLeft: "50%",
+				});
+				$("#fastload-onoff").text("ON");
+				fastload = 1;
+			}
+			else{
+				$("#boxfastload").animate({
+					marginLeft: "0px",
+				});
+				$("#fastload-onoff").text("OFF");
+				fastload = 0;
+			}
+		}
+
+		function fblind(){
+			if(blind==0){
+				$("#boxblind").animate({
+				marginLeft: "50%",
+				});
+				$("#blind-onoff").text("ON");
+				blind = 1;
+			}
+			else{
+				$("#boxblind").animate({
+					marginLeft: "0px",
+				});
+				$("#blind-onoff").text("OFF");
+				blind = 0;
+			}
+		}
+
+		function fz3(){
+			if(z3==0){
+				$("#boxz3").animate({
+				marginLeft: "50%",
+				});
+				$("#z3-onoff").text("ON");
+				z3 = 1;
+			}
+			else{
+				$("#boxz3").animate({
+					marginLeft: "0px",
+				});
+				$("#z3").css({
+					"background-color" :  coloroff
+				});
+				$("#z3-onoff").text("OFF");
+				z3 = 0;
+			}
+		}
+
+		$(".tema-content-box span:eq(0)").click(function(){
+			 $( "#temacontent" ).text( "Tema Kristal Indigo" );
+			 $( "#buttontema").css({"background-image":"linear-gradient(to right, #db70ff , #8d2c8f)"});
+			 //--------------------------------
+			 $( ".sharp").css(
+			 {
+			 	"background-image" : "linear-gradient( 150deg , #8d2c8f 70%, rgba(0,0,0,0) 30%)"
+			 });
+
+			 $( ".item2").css(
+			 {
+			 	"background-color" : "#db70ff"
+			 });
+			 $( ".listumum , .listtampilan , .listprivasi , .listadvance").css(
+			 {
+			 	"background-color" : "#c35ce6"
+			 });
+
+			  $(".actived , .checkcombo-content-box").css({
+			 	"background-color" : "#8d2c8f"
+			 });
+
+			$(".box-checkbox , #combotema").css({
+				"background-color" : "white"
+			});
+			$(".item1").css({
+				"background-image" : "url('content2.png')",
+				"background-size" : "cover"
+			});
+
+			$(".item2 div:not(.actived)").css({
+				"background-image":"linear-gradient(to right, #db70ff , #8d2c8f)"
+			});
+			$(".item2 div:active").css({
+				"background-color" : "#501d61"
+			});
+			$("#fastload , #blind, #z3 , #buttoncombo").css({
+				"background-color" : "#904aa8"
+			});
+            coloractive = "#8d2c8f";
+            colordeactive = "linear-gradient(to right, #db70ff , #8d2c8f)"
+            //--------------------------------
+		});
+
+		$(".tema-content-box span:eq(1)").click(function(){
+			 $( "#temacontent" ).text( "Tema Laut Hijau" );
+			 $( "#buttontema").css({"background-image":"linear-gradient(to right, #77edaa , #02bd27)"});
+			 //-------------------------------- Laut Hijau
+			 $( ".sharp").css(
+			 {
+			 	"background-image" : "linear-gradient(150deg, seagreen 70%, transparent 30%)"
+			 });
+
+			 $( ".item2").css(
+			 {
+			 	"background-color" : "mediumseagreen"
+			 });
+			 $( ".listumum , .listtampilan , .listprivasi , .listadvance").css(
+			 {
+			 	"background-color" : "#00fa6c"
+			 });
+
+			  $(".checkcombo-content-box").css({
+			 	"background-color" : "seagreen"
+			 });
+
+			$(".box-checkbox , #combotema").css({
+				"background-color" : "white"
+			});
+
+			$(".item1").css({
+				"background-image" : "url('content.png')",
+				"background-size" : "cover"
+			});
+
+			$(".item2 div:not(.actived)").css({
+				"background-image":"linear-gradient(to right, lightseagreen , seagreen)"
+			});
+			$(".item2 div:active , .actived").css({
+				"background-color" : "green"
+			});
+			$("#fastload , #blind, #z3 , #buttoncombo").css({
+				"background-color" : "lightseagreen"
+			});
+           	coloractive = "green";
+            colordeactive = "linear-gradient(to right, lightseagreen , seagreen)"
+			//--------------------------------
+		});
+
+		$(".tema-content-box span:eq(2)").click(function(){
+			 $( "#temacontent" ).text( "Tema Langit Mars" );
+			 $( "#buttontema").css({"background-image":"linear-gradient(to right, #ff8a4f , #f7a025)"});
+			 //---------------------------
+			 $( ".sharp").css(
+			 {
+			 	"background-image" : "linear-gradient(150deg, #f7a025 70%, transparent 30%)"
+			 });
+
+			 $( ".item2").css(
+			 {
+			 	"background-color" : "#ff8a4f"
+			 });
+			 $( ".listumum , .listtampilan , .listprivasi , .listadvance").css(
+			 {
+			 	"background-color" : "#fc7835"
+			 });
+
+			  $(".checkcombo-content-box").css({
+			 	"background-color" : "#fc7835"
+			 });
+
+			$(".box-checkbox , #combotema").css({
+				"background-color" : "white"
+			});
+
+			$(".item1").css({
+				"background-image" : "url('content3.png')",
+				"background-size" : "cover"
+			});
+
+			$(".item2 div:not(.actived)").css({
+				"background-image":"linear-gradient(to right, #ff8a4f , #f7a025)"
+			});
+			$(".item2 div:active , .actived").css({
+				"background-color" : "orange"
+			});
+			$("#fastload , #blind, #z3 , #buttoncombo").css({
+				"background-color" : "#ff8a4f"
+			});
+           	coloractive = "orange";
+            colordeactive = "linear-gradient(to right, #ff8a4f , #f7a025)"
+			 //---------------------------
+		});
+
+
+		$("#privasi1-box span:first").click(function(){
+			 $( "#privasi1" ).text( "Setuju" );
+		});
+		$("#privasi1-box span:eq(1)").click(function(){
+			 $( "#privasi1" ).text( "Tidak Setuju" );
+		});
+
+	
+</script>
+
+<div class="ftr">
+<div class="btnfot"></div>
+<div id="containerfot">
+<div id="contfot">
+<div class="ftr_center">
+<h3>DEV GRAPHIC.</h3>
+</div>
+</div>
+</div>
+</div>
+
+</body>
+</html>

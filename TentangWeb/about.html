@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Tentang Website</title>
+	<link rel="stylesheet" type="text/css" href="about.css">
+	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="jquery.hislide.js" ></script>
+</head>
+<body>
+	<div class="bgimg-1">
+		<div>
+<ul class="navigasi" id="nav">
+	<li><a onclick="openNav()" id="main">Menu</a></li>
+	<li><a href="..\Beranda\beranda.html">Beranda</a></li>
+	<li><a href="..\Profile\profile.html">Profile</a></li>
+	<li><a href="..\leaderboard\leaderboard.html">Rangking</a></li>
+	<li><a href="..\login\loginn.html">Masuk</a></li>
+	<li style="float:right"><a href="#about">DEV GRAPHIC.</a></li>
+</ul>
+</div>
+
+<div class="topnav">
+  <div class="search-container">
+    <form>
+      <input type="text" placeholder="Search..">
+      <button type="submit">Cari</button>
+    </form>
+  </div>
+</div>
+		
+		<div id="mySidebar" class="sidebar">
+ 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+  			<a href="..\kategori\kategori.html">Kategori</a>
+  			<a href="..\kategori.html">Logo</a>
+  			<a href="..\kategori\kategori.html">Poster</a>
+  			<a href="..\kategori\kategori.html">Icon</a>
+  			<a href="..\kategori\kategori.html">Banner</a>
+		</div>
+
+		<div class="caption">
+			<h1>Sesuatu Tentang Kami</h1>
+			<p>Kami adalah campuran dari desain, teknologi, dan pemasaran.<br>Kami memiliki misi untuk membangun komunitas terbaik di dunia<br>agar kreatif dapat dibagikan, tumbuh, dan dipekerjakan</p>
+		</div>		
+	</div>
+
+	<div class="about">
+		<div class="about-left">
+			<h1>Buat Design Grafis Anda Sendiri dan Pamerkan Hasil Desain Anda</h1>
+		</div>
+		<div class="about-right">
+			<p>Puluhan juta orang mencari inspirasi desain dan umpan balik pada Dev Graphic. Kami membantu para designer seperti Anda membagikan tangkapan layar kecil (tembakan) untuk memamerkan hasil desain Anda saat ini, meningkatkan portofolio Anda, dan menyukai apa yang Anda lakukan — tidak peduli apa pun profesional kreatif Anda. Kami adalah perusahaan yang membantu merancang berbagi bakat, tumbuh, dan membuka pekerjaan untuk para designer. Hingga kini sudah lebih dari 40.000 merek yg dihasilkan para designer paling inovatif di seluruh dunia.</p>
+		</div>
+	</div>
+
+	<div class="bgimg-2">
+	<div class="slide hi-slide">
+		<h2>Logo, Barner, Poster, Icon & Masih Banyak Design Lainnya!</h2>
+		<div class="hi-prev "></div>
+		<div class="hi-next "></div>
+			<ul>
+				<li><img src="poster2.jpg" alt="Img 1" /></li>
+				<li><img src="logo2.png" alt="Img 2" /></li>
+				<li><img src="banner.jpg" alt="Img 3" /></li>
+				<li><img src="logo3.jpg" alt="Img 4" /></li>
+				<li><img src="poster3.jpg" alt="Img 5" /></li>
+				<li><img src="in-poster.png" alt="Img 6" /></li>
+				<li><img src="banner3.jpg" alt="Img 7" /></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="joined">
+		<div class="caption2">
+			<h1>Join Bersama Kami</h1>
+			<p>Gabunglah bersama kami, buatlah imajinasi design anda sekreatif mungkin<br>dan
+			yakinkan mereka bahwa design anda adalah design yang terbaik</p>
+		</div>
+		<a href="..\login\loginn.html" class="button">Join Us</a>
+	</div>
+
+	<div class="ftr">
+		<div class="btnfot"></div>
+		<div id="containerfot">
+			<div id="contfot">
+				<div class="ftr_center">
+					<h3>DEV GRAPHIC.</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		function openNav() {
+  		document.getElementById("mySidebar").style.width = "205px";
+  		document.getElementById("#main").style.marginLeft = "205px";
+		}
+
+		function closeNav() {
+  		document.getElementById("mySidebar").style.width = "0";
+  		document.getElementById("#main").style.marginLeft= "0";
+		}
+	</script>
+
+	<script>
+		/*for class about*/
+		$(function(){  // $(document).ready shorthand
+  		$('.bgimg-1').fadeIn('slow');
+		});
+
+		$(document).ready(function() {
+    /* Every time the window is scrolled ... */
+    		$(window).scroll( function(){
+       	 	/* Check the location of each desired element */
+        		$('.about').each( function(i){
+            		var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            		var bottom_of_window = $(window).scrollTop() + $(window).height();
+            /* If the object is completely visible in the window, fade it it */
+            		if( bottom_of_window > bottom_of_object ){
+                		$(this).animate({'opacity':'1'},1000);   
+            		}
+        		}); 
+    		});    
+		});
+
+		/*for class joined*/
+		$(function(){  
+  		$('.bgimg-2').fadeIn('slow');
+		});
+		$(document).ready(function() {
+    		$(window).scroll( function(){
+        		$('.joined').each( function(i){
+            		var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            		var bottom_of_window = $(window).scrollTop() + $(window).height();
+            		if( bottom_of_window > bottom_of_object ){
+                		$(this).animate({'opacity':'1'},1000);   
+            		}
+        		}); 
+    		});    
+		});
+	</script>
+
+	<script>
+		$('.slide').hiSlide({
+			interval: 2000,
+			speed: 700
+		});
+	</script>
+
+
+</body>
+</html>

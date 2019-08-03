@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="beranda_css.css">
+	<script type="text/javascript" src="jquery-3.4.1.min.js">
+	</script>
+<title>Beranda</title>
+</head>
+<body class="background">
+<div>
+<ul class="navigasi" id="nav">
+	<li><a onclick="openNav()" id="main">Menu</a></li>
+	<li><a href="..\TentangWeb\about.html">TentangWebsite</a></li>
+	<li><a href="..\Profile\profile.html">Profile</a></li>
+	<li><a href="..\leaderboard\leaderboard.html">Rangking</a></li>
+	<li><a href="..\login\loginn.html">Masuk</a></li>
+	<li style="float:right"><a href="#about">DEV GRAPHIC.</a></li>
+</ul>
+</div>
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+  <a href="..\kategori\kategori.html">Kategori</a>
+  <a href="..\kategori\kategori.html">Logo</a>
+  <a href="..\kategori\kategori.html">Poster</a>
+  <a href="..\kategori\kategori.html">Icon</a>
+  <a href="..\kategori\kategori.html">Banner</a>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "205px";
+  document.getElementById("#main").style.marginLeft = "205px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("#main").style.marginLeft= "0";
+}
+</script>
+
+<div class="topnav">
+  <div class="search-container">
+    <form>
+      <input type="text" placeholder="Search..">
+      <button type="submit">Cari</button>
+    </form>
+  </div>
+</div>
+
+
+	<div class="slideshow-container">
+	
+<div class="mySlides fade">
+	<img src="..\Gambar\a.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+	<img src="..\Gambar\b.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+	<img src="..\Gambar\c.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+	<img src="..\Gambar\d.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+	<img src="..\Gambar\e.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+	<div class="numbertext"></div>
+	<img src="..\Gambar\f.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+	<img src="..\Gambar\g.jpg" style="width:100%">
+</div>
+
+</div>
+
+<div class="fott">
+	<center>
+		<a href="..\request\request.html"><button class="request">Pesan Desain</button></a>
+	</center>
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  if(slideIndex<=6){
+  slideIndex++;
+	slides[slideIndex-1].style.display = "block";
+	setTimeout(showSlides, 2500);}
+  else {
+  slideIndex=0;
+  showSlides();
+  } 
+}
+</script>
+<br>
+<div class="main">
+
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <img class="zoom" src="..\Gambar\a.jpg" style="width:100%">
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img class="zoom" src="..\Gambar\b.jpg" style="width:100%">
+      </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img class="zoom" src="..\Gambar\c.jpg" style="width:100%">
+      </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img class="zoom" src="..\Gambar\d.jpg" style="width:100%">
+      </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img class="zoom" src="..\Gambar\a.jpg" style="width:100%">
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img class="zoom" src="..\Gambar\b.jpg" style="width:100%">
+      </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img class="zoom" src="..\Gambar\c.jpg" style="width:100%">
+      </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img class="zoom" src="..\Gambar\d.jpg" style="width:100%">
+      </div>
+  </div>
+  
+</div>
+</div>
+
+<div class="ftr">
+<div class="btnfot"></div>
+<div id="containerfot">
+<div id="contfot">
+<div class="ftr_center">
+<h3>DEV GRAPHIC.</h3>
+</div>
+</div>
+</div>
+</div>
+
+</body>
+</html>

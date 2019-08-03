@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Double Form</title>
+	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="loginn.css">
+</head>
+<body>
+	<div class="navbar">
+		<h1><a href="..\Beranda\beranda.html">DEV GRAPHIC.</a></h1>
+	</div>
+
+	<div class="container" id="container">
+    <div class="form-container sign-up-container">
+        <!-- Sign Up form code goes here -->
+		<div class="form-container sign-up-container">
+    		<form action="#">
+        		<div class="heading">
+        			<h1>Sign Up</h1>
+       				<span>Gunakan Email Anda Untuk Registrasi</span>
+       			</div>
+        		<div class="inputbox">
+        			<input type="text" name="Name" required="">
+        			<label>Name</label>
+        		</div>
+        		<div class="inputbox">
+        			<input type="email" name="Email" required="">
+        			<label>Email</label>
+        		</div>
+        		<div class="inputbox">
+        			<input type="password" name="Password" required="">
+        			<label>Password</label>
+        		</div>
+        		<button type="submit" class="btn_signup">Sign Up</button>
+    		</form>
+		</div>
+    </div>
+    
+    <div class="form-container sign-in-container">
+        <!-- Sign In form code goes here -->
+		<div class="form-container sign-in-container">
+    		<form action="#">
+    			<div class="heading">
+        			<h1>Sign in</h1>
+        			<span>Gunakan Akun Anda</span>
+        		</div>
+        		<div class="inputbox">
+        			<input type="email" name="Email" required="">
+        			<label>Email</label>
+        		</div>
+        		<div class="inputbox">
+        			<input type="password" name="Password" required="">
+        			<label>Password</label>
+        		</div>
+        		<a class="forgot" href="#">Lupa Password?</a>
+        		<button type="submit" class="btn_signup"><a href="..\Profile\profile.html">Sign In</a></button>
+    			</form>
+		</div>	
+    </div>
+    
+    <div class="overlay-container">
+        <!-- The overlay code goes here -->
+		<div class="overlay-container">
+    		<div class="overlay">
+        	<div class="overlay-panel overlay-left">
+            	<h1>Selamat Datang Kembali, Teman!</h1>
+            	<p>Untuk Bisa Terhubungan Dengan Kami<br>Mohon Masuk Dengan Akun Anda</p>
+           		<button class="ghost" id="signIn">Sign In</button>
+        	</div>
+        	<div class="overlay-panel overlay-right" id="signUp">
+            	<h1>Hello, Teman!</h1>
+            	<p>Masukkan Data Pribadi Anda<br>
+            	Dan Mulailah Project Desain<br>Bersama Kami</p>
+            	<button class="ghost" id="signUp">Sign Up</button>
+        	</div>
+    		</div>
+		</div>
+    </div>
+	</div>
+	
+	<script>
+		const signUpButton = document.getElementById('signUp');
+		const signInButton = document.getElementById('signIn');
+		const container = document.getElementById('container');
+
+		signUpButton.addEventListener('click', () => {
+    	container.classList.add('right-panel-active');
+		});
+
+		signInButton.addEventListener('click', () => {
+    	container.classList.remove('right-panel-active');
+		});
+	</script>
+</body>
+</html>
